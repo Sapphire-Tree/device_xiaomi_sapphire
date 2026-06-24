@@ -14,6 +14,11 @@ $(call inherit-product, device/xiaomi/sapphire/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#Luanris Stuff
+TARGET_CUSTOM_UDFPS := true
+WITH_GMS := true
+SURFACE_FLINGER_BOOST := true
+
 # Signed-keys
 include vendor/lineage-priv/keys/keys.mk
 
