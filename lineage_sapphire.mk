@@ -16,11 +16,12 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 #Luanris Stuff
 TARGET_CUSTOM_UDFPS := true
-WITH_GMS := true
+TARGET_USE_WALLPAPERS := true
 SURFACE_FLINGER_BOOST := true
+LUNARIS_BUILD_TYPE := OFFICIAL
 
 # Signed-keys
-include vendor/lineage-priv/keys/keys.mk
+-include vendor/lunaris-priv/keys/keys.mk
 
 # Device configs
 TARGET_BOOT_ANIMATION_RES = 1080
