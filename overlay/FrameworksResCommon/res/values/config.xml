@@ -372,4 +372,9 @@
          the blur effect where it isn't worth the performance hit.
          As of Honeycomb, blurring is not supported anymore. -->
     <bool name="config_sf_slowBlur">false</bool>
+
+    <!-- Whether the device supports window-level (cross-window) blurs.
+         Forced true here since ro.surface_flinger.supports_background_blur=1
+         is set in system_ext.prop for sapphire (Adreno 610 / SM6225). -->
+    <bool name="config_enableBlurs">true</bool>
 </resources>
