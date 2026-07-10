@@ -12,23 +12,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sapphire/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-#Luanris Stuff
-TARGET_CUSTOM_UDFPS := true
-TARGET_USE_WALLPAPERS := true
-SURFACE_FLINGER_BOOST := true
-LUNARIS_BUILD_TYPE := OFFICIAL
+$(call inherit-product, vendor/circle/config/common_full_phone.mk)
 
 # Signed-keys
--include vendor/lunaris-priv/keys/keys.mk
+-include vendor/circle-priv/keys/keys.mk
 
 # Device configs
 TARGET_BOOT_ANIMATION_RES = 1080
 TARGET_HAS_UDFPS := true
 WITH_GMS := true
+CIRCLE_BUILDTYPE := OFFICIAL
+CIRCLE_MAINTAINER := WibuRach:3
 
-PRODUCT_NAME := lineage_sapphire
+PRODUCT_NAME := circle_sapphire
 PRODUCT_DEVICE := sapphire
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
